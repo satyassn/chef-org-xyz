@@ -1,0 +1,17 @@
+{
+    "name": "linux-base",
+    "description": "This is an linux-base role defined as JSON",
+    "chef_type": "role",
+    "json_class": "Chef::Role",
+    "default_attributes": {
+    },
+    "override_attributes": {
+	    "chef-client": {
+	    	"init_style": "init"
+	    }
+    },
+    "run_list": [
+        "recipe[chef-client::init_service]",
+        "recipe[testcd::testr1]"
+    ]
+}
